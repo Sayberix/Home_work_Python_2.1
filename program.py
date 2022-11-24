@@ -6,3 +6,23 @@
 # - x=34; y=-30 -> 4
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
+
+xInput = input("введите координату X: ")
+yInput = input("введите координату Y: ")
+
+if xInput.isdigit() == True and yInput.isdigit() == True:
+    x = int(xInput)
+    y = int(yInput)
+    if x != 0 and y != 0:
+        if x > 0 and y > 0:
+            print('1-ая четверть')
+        elif x < 0 and y > 0:
+            print('2-ая четверть')
+        elif x < 0 and y < 0:
+            print('3-я четверть')
+        elif x > 0 and y < 0:
+            print('4-ая четверть')
+    else:
+        print('неверно введенные координаты! Кординаты не должны быть равны нулю! Программа завершает работу!')
+else:
+    print('неверный ввод! Введеные символы должны быть числом!')
